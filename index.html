@@ -43,6 +43,23 @@ footer{padding:28px 0 110px;font-size:13px;color:#555;text-align:center}
 .fixo{position:fixed;left:0;right:0;bottom:0;padding:10px 16px;background:rgba(255,255,255,.95);box-shadow:0 -3px 12px rgba(0,0,0,.15);z-index:10}
 .fixo .btn{max-width:520px;margin:0 auto;padding:14px 18px;font-size:18px}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1667353391674672');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1667353391674672&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -117,5 +134,12 @@ footer{padding:28px 0 110px;font-size:13px;color:#555;text-align:center}
   <a class="btn" href="https://wa.me/5588998064387?text=Ol%C3%A1!%20Quero%20emitir%20a%202%C2%AA%20via%20do%20documento%20do%20meu%20ve%C3%ADculo." target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
 </div>
 
+<script>
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(a,i){
+  a.addEventListener('click',function(){
+    if(window.fbq) fbq('trackCustom','CliqueWhatsApp',{botao:i+1,texto:a.textContent.trim()});
+  });
+});
+</script>
 </body>
 </html>
